@@ -1,0 +1,34 @@
+<div class="container">
+  <button (click)="refresh()">Refresh</button>
+  
+  <div class="grid">
+    <div>
+      <span>ID</span>
+    </div>
+    <div>
+      <span>Title</span>
+    </div>
+    <div>
+      <span>Description</span>
+    </div>
+    <div>
+      <span>Actions</span>
+    </div> 
+  </div>
+  
+  <div class="grid" *ngFor="let issue of issues">
+      <div>
+        {{ issue.id }}
+      </div>
+      <div>
+        {{ issue.title }}
+      </div>
+      <div>
+        {{ issue.description }}
+      </div>
+      <div>
+        <button (click)="deleteIssue(issue.id)">Delete</button>
+        <button (click)="updateIssue(issue)">Update</button>
+      </div>
+  </div>
+</div>

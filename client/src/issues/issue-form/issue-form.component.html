@@ -1,0 +1,11 @@
+<form [formGroup]="issueForm"  >
+  <span>
+    <label for="issueTitle">Title</label>
+      <input formControlName="title" type="text" class="form-control" id="issueTitle"  placeholder="Enter title">
+  </span>
+  <span>
+    <label for="issueDescription">Description</label>
+    <input formControlName="description" type="text" placeholder="Enter description"/>
+  </span>
+  <button (click)="submitIssue()">Submit</button>
+</form>
